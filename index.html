@@ -10,10 +10,10 @@
   .wrap{max-width:1040px;margin:0 auto;padding:28px 18px 40px}
   h1{font-size:28px;line-height:1.2;margin:0 0 6px}.sub{color:#555;margin:0 0 22px}
   .grid{display:grid;grid-template-columns:1fr 340px;gap:18px}
-  @media (max-width:820px){.grid{grid-template-columns:1fr}}
+  @media (max-width:820px){.grid{grid-template-columns:1fr}.device{height:400px}}
   .device{position:relative;height:460px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 2px 18px #0002}
   .default{display:flex;height:100%;font:15px/1.5 system-ui}
-  .default nav{width:190px;padding:16px;background:#f6f6f2;border-right:1px solid #e6e6e0}.default nav p{color:#666;margin:.5em 0}
+  .default nav{width:min(190px,32%);padding:16px;background:#f6f6f2;border-right:1px solid #e6e6e0}.default nav p{color:#666;margin:.5em 0}
   .default main{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:16px}
   .default .msgs p{padding:10px 14px;border-radius:12px;max-width:80%}.default .me{background:#e9e4ff;margin-left:auto}.default .ai{background:#f1f1ee}
   .default .box{border:1px solid #ddd;border-radius:12px;padding:12px;color:#999}
@@ -80,6 +80,7 @@ const say = text => { toast.textContent = text; };
 
 async function apply(code, label, done) {
   say('Test-running the new screen…');
+  if (innerWidth < 820) device.scrollIntoView({ behavior: 'smooth', block: 'start' });
   const result = await mountScreen(device, code, {
     store,
     onFail: () => { localStorage.removeItem(KEY + 'code'); current = null; say('That screen stopped answering, so it was closed. You are back on the default screen.'); },

@@ -10,8 +10,8 @@ export const DESIGNS = [
     code: `ui.render(\`<div class="app"><main>${CHAT}<div class="box">Ask anything</div></main><nav><strong>Chats</strong><p>Electricity bill</p><p>Weekly report</p><p>Gym times</p></nav></div>\`,
 \`.app{display:flex;height:100%;font:20px/1.5 system-ui;background:#fff;color:#222}
 main{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:20px}
-nav{width:240px;border-left:1px solid #ddd;padding:20px;background:#f6f6f2}nav p{margin:.6em 0;color:#555}
-.msgs p{padding:12px 16px;border-radius:14px;max-width:80%}.me{background:#e9e4ff;margin-left:auto}.ai{background:#f1f1ee}
+nav{width:min(240px,34%);border-left:1px solid #ddd;padding:20px;background:#f6f6f2}nav p{margin:.6em 0;color:#555}
+.msgs p{padding:12px 16px;border-radius:14px;max-width:90%}.me{background:#e9e4ff;margin-left:auto}.ai{background:#f1f1ee}
 .box{border:1px solid #ccc;border-radius:14px;padding:14px;color:#999}\`);`,
   },
   {
@@ -19,7 +19,7 @@ nav{width:240px;border-left:1px solid #ddd;padding:20px;background:#f6f6f2}nav p
     words: ['night', 'dark', '어둡', '밤'],
     code: `ui.render(\`<div class="app"><nav><strong>Chats</strong><p>Electricity bill</p><p>Weekly report</p></nav><main>${CHAT}<div class="box">Ask anything</div></main></div>\`,
 \`.app{display:flex;height:100%;font:15px/1.5 system-ui;background:#0d1020;color:#d8dcf0}
-nav{width:200px;padding:16px;background:#151a33}nav p{color:#8b93b8}
+nav{width:min(200px,32%);padding:16px;background:#151a33}nav p{color:#8b93b8}
 main{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:16px}
 .msgs p{padding:10px 14px;border-radius:12px;max-width:80%}.me{background:#3b3f8f;margin-left:auto}.ai{background:#1d2340}
 .box{border:1px solid #2c335a;border-radius:12px;padding:12px;color:#6b739a}\`);`,
@@ -49,7 +49,7 @@ draw();`,
     words: ['timer', 'focus', 'pomodoro', '타이머', '집중'],
     code: `let left = 25 * 60, on = false;
 const css = \`.app{display:flex;height:100%;font:15px/1.5 system-ui;background:#fffaf2;color:#222}
-aside{width:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-right:1px solid #eee}
+aside{width:min(220px,40%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-right:1px solid #eee}
 .t{font:600 44px/1 ui-monospace,monospace}button{padding:8px 18px;border:0;border-radius:999px;background:#e8590c;color:#fff}
 main{flex:1;padding:16px}.msgs p{padding:10px 14px;border-radius:12px;max-width:80%}.me{background:#ffe8d6;margin-left:auto}.ai{background:#f3f0ea}\`;
 const draw = () => ui.render(\`<div class="app"><aside><small>Focus</small><div class="t">\${String(Math.floor(left / 60)).padStart(2, '0')}:\${String(left % 60).padStart(2, '0')}</div><button data-action="toggle">\${on ? 'Pause' : 'Start'}</button></aside><main>${CHAT}</main></div>\`, css);
