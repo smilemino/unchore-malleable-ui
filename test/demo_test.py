@@ -1,4 +1,5 @@
 # Runs the demo in headless Chromium and checks every promise the README makes.
+# Set DEMO_URL to test a deployed copy instead of a local server.
 import http.server, threading, functools, os, sys, time
 from playwright.sync_api import sync_playwright
 
@@ -7,7 +8,7 @@ class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *a): pass
 srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=ROOT))
 threading.Thread(target=srv.serve_forever, daemon=True).start()
-URL = f"http://127.0.0.1:{srv.server_port}/index.html"
+URL = os.environ.get("DEMO_URL") or f"http://127.0.0.1:{srv.server_port}/index.html"
 fails = []
 def check(name, ok):
     print(("PASS " if ok else "FAIL ") + name); ok or fails.append(name)
