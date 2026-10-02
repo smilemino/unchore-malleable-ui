@@ -7,7 +7,7 @@ export const DESIGNS = [
   {
     say: 'Bigger text, and put the menu on the right',
     words: ['bigger', 'larger', 'right', 'font', 'text', '글자', '크게', '오른쪽'],
-    code: `ui.render(\`<div class="app"><main>${CHAT}<div class="box">Ask anything</div></main><nav><strong>Chats</strong><p>Electricity bill</p><p>Weekly report</p><p>Gym times</p></nav></div>\`,
+    code: `ui.render(\`<div class="app"><main>${CHAT}<div class="box">Ask Claude anything</div></main><nav><strong>Chats</strong><p>Electricity bill</p><p>Weekly report</p><p>Gym times</p></nav></div>\`,
 \`.app{display:flex;height:100%;font:20px/1.5 system-ui;background:#fff;color:#222}
 main{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:20px}
 nav{width:min(240px,34%);border-left:1px solid #ddd;padding:20px;background:#f6f6f2}nav p{margin:.6em 0;color:#555}
@@ -17,7 +17,7 @@ nav{width:min(240px,34%);border-left:1px solid #ddd;padding:20px;background:#f6f
   {
     say: 'Night mode, please',
     words: ['night', 'dark', '어둡', '밤'],
-    code: `ui.render(\`<div class="app"><nav><strong>Chats</strong><p>Electricity bill</p><p>Weekly report</p></nav><main>${CHAT}<div class="box">Ask anything</div></main></div>\`,
+    code: `ui.render(\`<div class="app"><nav><strong>Chats</strong><p>Electricity bill</p><p>Weekly report</p></nav><main>${CHAT}<div class="box">Ask ChatGPT anything</div></main></div>\`,
 \`.app{display:flex;height:100%;font:15px/1.5 system-ui;background:#0d1020;color:#d8dcf0}
 nav{width:min(200px,32%);padding:16px;background:#151a33}nav p{color:#8b93b8}
 main{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:16px}

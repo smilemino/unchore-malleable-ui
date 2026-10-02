@@ -1,7 +1,9 @@
-# Redesign your app by talking to it
+# Your AI, your interface
 
-**Everyone starts with the same screen. Each user says how they want theirs, and only theirs changes.**
-This repo is the pattern behind "your screen, your way" in [Unchore](https://unchore.ai/?utm_source=github&utm_medium=malleable-ui-readme), boiled down to one dependency-free file you can read in five minutes.
+**Use Claude or ChatGPT in a screen you design yourself, just by saying how you want it.**
+In [Unchore](https://unchore.ai/?utm_source=github&utm_medium=malleable-ui-readme) you connect your own Claude or ChatGPT plan (or a Gemini, Grok, DeepSeek or Kimi key). Everyone starts with the same screen. Say "bigger text, menu on the right" and only your screen changes. Same AI, a different interface for every person.
+
+This repo is the pattern behind that feature, boiled down to one dependency-free file you can read in five minutes.
 
 **[▶ Try the live demo](https://smilemino.github.io/unchore-malleable-ui/)** (no signup, no AI key)
 
@@ -9,7 +11,7 @@ This repo is the pattern behind "your screen, your way" in [Unchore](https://unc
 
 ## Why
 
-Apps ship one layout for millions of people. A designer picks where the menu goes, and everyone lives with it.
+AI chat apps ship one layout for millions of people. A designer picks where the menu goes, and everyone lives with it, whether they use the AI for code, sales or homework.
 Now that an AI can write a screen from a sentence, that choice can belong to each user:
 
 - "Bigger text, and put the menu on the right."
@@ -69,7 +71,7 @@ python test/demo_test.py
 
 ## In Unchore
 
-In the demo the edits are pre-written so it runs without an AI. In Unchore you just say it in the chat. The AI writes the screen, it is test-run, saved to your account only, and you can go back to the default screen at any time.
+In the demo the edits are pre-written so it runs without an AI. In Unchore you just say it in the chat, with whichever AI you connected: your Claude plan, your ChatGPT plan, or a key for Gemini, Grok, DeepSeek or Kimi. The AI writes the screen, it is test-run, saved to your account only, and you can go back to the default screen at any time.
 
 ![The same idea in the Unchore app](media/unchore-app.gif)
 
@@ -84,6 +86,8 @@ Unchore is a personal AI: ask anything, and if it repeats, Unchore offers to aut
 
 ## 한국어 요약
 
-처음에는 모두 같은 화면으로 시작하고, 회원이 «글자 크게, 메뉴는 오른쪽에»처럼 말하면 그 사람 화면만 바뀝니다. AI가 만든 화면 코드는 인터넷에 접속할 수 없고 쿠키나 저장 공간도 읽지 못하는 격리된 공간에서만 실행됩니다. 먼저 보이지 않게 시험해 보고 통과한 화면만 적용되며, 기본 화면으로 돌아가는 단추는 늘 격리된 공간 밖에 있습니다. [언초어](https://unchore.ai/?utm_source=github&utm_medium=malleable-ui-readme-ko)에서 실제로 쓸 수 있습니다.
+클로드·챗GPT를 내가 원하는 화면으로 쓰세요. 언초어에 내 클로드나 챗GPT 요금제(또는 제미나이·그록·딥시크·키미 열쇠)를 연결하고 화면을 말로 바꾸면 됩니다. 처음에는 모두 같은 화면으로 시작하고, 회원이 «글자 크게, 메뉴는 오른쪽에»처럼 말하면 그 사람 화면만 바뀝니다. AI가 만든 화면 코드는 인터넷에 접속할 수 없고 쿠키나 저장 공간도 읽지 못하는 격리된 공간에서만 실행됩니다. 먼저 보이지 않게 시험해 보고 통과한 화면만 적용되며, 기본 화면으로 돌아가는 단추는 늘 격리된 공간 밖에 있습니다. [언초어](https://unchore.ai/?utm_source=github&utm_medium=malleable-ui-readme-ko)에서 실제로 쓸 수 있습니다.
 
 MIT License
+
+Claude, ChatGPT, Gemini, Grok, DeepSeek and Kimi are trademarks of their owners. Unchore is not affiliated with them; it connects to the plan or key you already have.
