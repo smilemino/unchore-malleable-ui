@@ -7,6 +7,8 @@ This repo is the pattern behind that feature, boiled down to one dependency-free
 
 **[▶ Try the live demo](https://smilemino.github.io/unchore-malleable-ui/)** (no signup, no AI key)
 
+The full app is open source too: **[smilemino/unchore-ai](https://github.com/smilemino/unchore-ai)** (AGPL-3.0).
+
 ![Demo: night mode, bigger text with the menu on the right, a to-do list that survives a reload, a frozen screen that gets rejected, and a screen whose escape attempts are all blocked](media/demo.gif)
 
 ## Why
